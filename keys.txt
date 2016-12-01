@@ -1,0 +1,3 @@
+server ip: 162.243.157.104
+ssh pw: dsatcarleton
+mysql pw: 5cdb4cd047b0cc98cc4c61f880990777cf0aa9601de380ae

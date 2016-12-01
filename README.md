@@ -12,8 +12,6 @@ A scraper for older versions of Moodle.
 - Replace redirect links with actual target.
 
 
-
-
 ### Log
 
 #### 11/27
