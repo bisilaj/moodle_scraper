@@ -11,3 +11,23 @@ A scraper for older versions of Moodle.
 - Investigate structure of older versions of moodle to get the files `.doc . pdf etc`
 - Replace redirect links with actual target.
 
+
+
+
+### Log
+
+#### 11/27
+
+Reading thru the old scraper and investigate on better libs to use. Found `PyQt` , `PySide` and `Ghost`
+
+#### 11/28
+
+Installing moodle on Mac with mama and stuffs. However, `macOS sierra` has incompatibility with `PyQt` or `PySide` packages which are essential for `screen capture` of particular page.
+
+Found a bash tool that works quite well on taking a screen capture. However, needs to deal with login.
+
+Sample Capture results are saved to `webkit2png outputs` folder.
+
+#### 11/29
+
+Trying to restore moodle site with the test data given by Andrew. Failed a few attempts. Trying to reset back. However, now it just hangs on `checking environments`.
