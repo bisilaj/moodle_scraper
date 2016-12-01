@@ -29,3 +29,6 @@ Sample Capture results are saved to `webkit2png outputs` folder.
 #### 11/29
 
 Trying to restore moodle site with the test data given by Andrew. Failed a few attempts. Trying to reset back. However, now it just hangs on `checking environments`.
+
+Still stuck on  `checking environments` after 5 attempts by following installation guide for version `1.9 2.0 2.1 2.2 2.3 2.4 2.5`
+
