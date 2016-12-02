@@ -10,9 +10,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
+import time
+import os
 
-
-browser = webdriver.Firefox()
+chromedriver = "./chromedriver"
+os.environ["webdriver.chrome.driver"] = chromedriver
+browser = webdriver.Chrome(chromedriver)
 # browser.implicitly_wait(10)
 browser.get('https://moodle.carleton.edu/auth/shibboleth/index.php')
 wait1 = WebDriverWait(browser, 10)
@@ -31,6 +34,7 @@ submit.click()
 
 wait2 = WebDriverWait(browser, 20)
 wait2.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".no-overflow>p>a")))
-
+time.sleep(3)
+# needs to wait for the page fully displayed!
 browser.save_screenshot('screenie.png')
 browser.quit()
