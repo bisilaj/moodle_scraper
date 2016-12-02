@@ -34,4 +34,8 @@ Still stuck on  `checking environments` after 5 attempts by following installati
 
 #### 11/30
 
-After various tries with stuffs, settle down to use a combination of `Firefox` and `selenium` to capture the page. Right now it is working however it captures before the page fully loaded for some reason..
+After various tries with stuffs, settle down to use a combination of `Firefox` and `selenium` to capture the page. Right now it is working however it captures before the page fully loaded for some reason.
+
+Update:
+
+A dummy wait is implemented in this case. It's dumb but it works :)
