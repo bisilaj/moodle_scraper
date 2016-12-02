@@ -32,3 +32,6 @@ Trying to restore moodle site with the test data given by Andrew. Failed a few a
 
 Still stuck on  `checking environments` after 5 attempts by following installation guide for version `1.9 2.0 2.1 2.2 2.3 2.4 2.5`
 
+#### 11/30
+
+After various tries with stuffs, settle down to use a combination of `Firefox` and `selenium` to capture the page. Right now it is working however it captures before the page fully loaded for some reason..
