@@ -31,7 +31,7 @@ submit.click()
 
 wait2 = WebDriverWait(browser, 20)
 wait2.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".no-overflow>p>a")))
-
+time.sleep(5)
 # needs to wait for the page fully displayed!
 browser.save_screenshot('screenie.png')
 browser.quit()
