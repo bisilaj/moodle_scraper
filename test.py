@@ -1,40 +1,36 @@
-import sys
-import time
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
-from PyQt4.QtWebKit import *
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# @Date    : 2016-12-01 21:24:50
+# @Author  : Xingfan Xia (xiax@carleton.edu)
+# @Link    : http://xiax.tech
+# @Version : $0.1
 
-class Screenshot(QWebView):
-    def __init__(self):
-        self.app = QApplication(sys.argv)
-        QWebView.__init__(self)
-        self._loaded = False
-        self.loadFinished.connect(self._loadFinished)
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
 
-    def capture(self, url, output_file):
-        self.load(QUrl(url))
-        self.wait_load()
-        # set to webpage size
-        frame = self.page().mainFrame()
-        self.page().setViewportSize(frame.contentsSize())
-        # render image
-        image = QImage(self.page().viewportSize(), QImage.Format_ARGB32)
-        painter = QPainter(image)
-        frame.render(painter)
-        painter.end()
-        print 'saving', output_file
-        image.save(output_file)
 
-    def wait_load(self, delay=0):
-        # process app events until page loaded
-        while not self._loaded:
-            self.app.processEvents()
-            time.sleep(delay)
-        self._loaded = False
+browser = webdriver.Firefox()
+# browser.implicitly_wait(10)
+browser.get('https://moodle.carleton.edu/auth/shibboleth/index.php')
+wait1 = WebDriverWait(browser, 10)
+wait1.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#username")))
 
-    def _loadFinished(self, result):
-        self._loaded = True
+# username = browser.find_element_by_xpath(".//*[@id='username']")
+# password = browser.find_element_by_xpath(".//*[@id='password']")
+username = browser.find_element_by_css_selector("#username")
+password = browser.find_element_by_css_selector("#password")
 
-s = Screenshot()
-s.capture('http://webscraping.com', 'website.png')
-s.capture('http://webscraping.com/blog', 'blog.png')
+username.send_keys("xiax")
+password.send_keys("-Xxf19951206")
+# submit = browser.find_element_by_xpath("html/body/div[1]/div/div/div/form/div[3]/button")
+submit = browser.find_element_by_css_selector('.form-element.form-button')
+submit.click()
+
+wait2 = WebDriverWait(browser, 20)
+wait2.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".no-overflow>p>a")))
+
+browser.save_screenshot('screenie.png')
+browser.quit()
