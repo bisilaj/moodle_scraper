@@ -39,3 +39,7 @@ After various tries with stuffs, settle down to use a combination of `Firefox` a
 Update:
 
 A dummy wait is implemented in this case. It's dumb but it works :)
+
+#### 12/1 ~ 12/5
+
+Researching Moodle's tree structure.
