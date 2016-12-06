@@ -27,7 +27,6 @@ username = browser.find_element_by_css_selector("#username")
 password = browser.find_element_by_css_selector("#password")
 
 username.send_keys("xiax")
-time.sleep(2)
 password.send_keys("-Xxf19951206")
 # submit = browser.find_element_by_xpath("html/body/div[1]/div/div/div/form/div[3]/button")
 submit = browser.find_element_by_css_selector('.form-element.form-button')
