@@ -17,6 +17,7 @@ import os
 # os.environ["webdriver.chrome.driver"] = chromedriver
 # browser = webdriver.Chrome(chromedriver)
 browser = webdriver.PhantomJS()
+browser.implicitly_wait(10)
 browser.get('https://moodle.carleton.edu/auth/shibboleth/index.php')
 wait1 = WebDriverWait(browser, 10)
 wait1.until(EC.presence_of_element_located((By.CSS_SELECTOR, "#username")))

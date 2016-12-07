@@ -49,3 +49,7 @@ Something awkward… Chrome and Firefox coredrive didn't capture the whole page.
 PhantomJS does but there is something weird with the `send_key` function using PhantomJS. Researching reveals the problem lies in some compatibility issue in PhantomJS. People saying falling back to 1.9.8 should work and the creator says it will be fixed in the next patch.
 
 Safari Driver works at first..then auto fails somehow… probably some security stuff going on with it..
+
+#### 12/6
+
+Trying to fix problems found on 12/5. No luck yet.
