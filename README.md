@@ -53,3 +53,7 @@ Safari Driver works at first..then auto fails somehow… probably some security 
 #### 12/6
 
 Trying to fix problems found on 12/5. No luck yet.
+
+#### 12/7
+
+Created the moodle server both locally with `mamp` and on a ubuntu vps. Spend a lot of time fixing a issue with php version. Eventually fixed but have to know how to restore the test site with test data provided by andrew.
