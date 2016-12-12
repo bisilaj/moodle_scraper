@@ -42,8 +42,7 @@ A dummy wait is implemented in this case. It's dumb but it works :)
 
 #### 12/1 ~ 12/5
 
-Researching Moodle's tree structure. 
-
+df
 Something awkward… Chrome and Firefox coredrive didn't capture the whole page.
 
 PhantomJS does but there is something weird with the `send_key` function using PhantomJS. Researching reveals the problem lies in some compatibility issue in PhantomJS. People saying falling back to 1.9.8 should work and the creator says it will be fixed in the next patch.
@@ -65,3 +64,6 @@ Still fixing the issues spotted on 12/5. Found a working solution but it's in `R
 Trying to learn how to administrate moodle as well, but still have to deal with the backup restoring issue.
 
 > And the key.txt is removed for security.
+
+### Comments from Jon:
+I would recommend trying to switch to Firefox if you are still having issues with the Chrome JS. You are right that there is an issue with the selenium tool there. I think you are on the right track so far though with resizing the window and then taking a screenshot of it. 
